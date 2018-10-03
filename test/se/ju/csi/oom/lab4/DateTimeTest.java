@@ -13,6 +13,7 @@ public class DateTimeTest {
 	public void setUp() throws Exception {
 	}
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testToString() {
 		DateTime datetime = new DateTime(2016, 1, 1, 6, 0, 0);
@@ -23,9 +24,14 @@ public class DateTimeTest {
 		
 	}
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testDateTimeString() {
+		DateTime datetime = new DateTime("2015-04-04 05:05:05");
 		
+		Assert.assertEquals(new String("2015-04-04 05:05:05"), datetime.toString());
+		
+		System.out.println(datetime.toString());		
 	}
 
 }
